@@ -6,8 +6,9 @@ contract DappToken {
     // Set the total number of tokens
     // Read the total number of tokens
     uint256 public totalSupply; // public => automatically writes function to call totalsupply
-
-    constructor() {
-        totalSupply = 100000;
+    mapping(address => uint256) public balanceOf; // just defines the mapping from one datatype to another
+    constructor(uint256 _initialSupply) {
+        balanceOf[msg.sender] = _initialSupply;
+        totalSupply = _initialSupply;
     }
 }
