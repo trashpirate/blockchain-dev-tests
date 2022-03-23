@@ -1,3 +1,6 @@
+# wallet
+.secret
+
 # Logs
 logs
 *.log
